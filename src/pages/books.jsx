@@ -1,53 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/add-book.css";
+import "../css/books.css";
 
 function Books() {
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <a className="navbar-brand" href="/">
-          Library Management
-        </a>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                Dashboard
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/books">
-                Books
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/members">
-                Members
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/settings">
-                Settings
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login">
-                Log out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       {/* Button to Show Add Book Form */}
-      <div className="container mt-4 text-center">
+      <div className="container m-2000 border text-center">
         <button className="btn btn-primary">Add Book</button>
       </div>
 
       {/* Add Book Form */}
-      <div className="container mt-4" style={{ display: "none" }}>
+      <div className="container mt-44 h-screen " style={{ display: "none" }}>
         <h3 className="text-center text-primary">Add New Book</h3>
 
         <form>
