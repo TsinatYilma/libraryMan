@@ -70,7 +70,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.stats-card:hover {
+.stats-card:hover { 
     transform: scale(1.05);
 }
 

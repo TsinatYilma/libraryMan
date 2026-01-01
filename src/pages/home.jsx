@@ -1,77 +1,113 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/home.css";
+import {
+  BookOpen,
+  Users,
+  BookMarked,
+  Settings,
+  ArrowRight,
+} from "lucide-react";
+import { StatCard } from "@/components/StatCard";
+import { ActionButton } from "@/components/ActionButton";
+import libraryIcon from "@/assets/library-icon.png";
 
-function Home() {
+const Home = () => {
   return (
-    <>
-      {/* Navbar */}
-      
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="hero-gradient min-h-[60vh] flex items-center justify-center px-4 py-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="animate-scale-in mb-8">
+            <img
+              src={libraryIcon}
+              alt="Library Management System"
+              className="w-32 h-32 mx-auto object-contain drop-shadow-sm"
+            />
+          </div>
 
-      {/* Welcome Section */}
-      <section className="welcome-section">
-        <div className="container text-center">
-          <img
-            className="icon mb-3"
-            src="/images/icon.png"
-            alt="Library Icon"
-          />
-          <h1>Welcome to the Library Management System</h1>
-          <p>Stay organized and efficient!</p>
-          <a href="books.html" className="btn btn-primary btn-lg">
-            Start Managing Books
-          </a>
+          <h1 className="animate-fade-in text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-4 leading-tight">
+            Welcome to the Library
+            <span className="block text-primary mt-2">Management System</span>
+          </h1>
+
+          <p className="opacity-0 animate-fade-in-delay-1 text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
+            Stay organized and efficient with our elegant solution for managing
+            your library's collection, members, and transactions.
+          </p>
+
+          <div className="opacity-0 animate-fade-in-delay-2">
+            <button className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium text-lg shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
+              Start Managing Books
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Statistics */}
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="stats-card">
-              <div className="card-header">Total Books</div>
-              <div className="card-body">
-                <h5 className="card-title">120</h5>
-                <p>Books are ready for checkout!</p>
-              </div>
+      {/* Statistics Section */}
+      <section className="px-4 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-3">
+              Library Overview
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Your library at a glance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="opacity-0 animate-fade-in-delay-1">
+              <StatCard
+                title="Total Books"
+                value={120}
+                description="Books are ready for checkout!"
+                icon={BookOpen}
+              />
+            </div>
+            <div className="opacity-0 animate-fade-in-delay-2">
+              <StatCard
+                title="Total Members"
+                value={45}
+                description="Members are actively using the library."
+                icon={Users}
+              />
+            </div>
+            <div className="opacity-0 animate-fade-in-delay-3">
+              <StatCard
+                title="Books Issued"
+                value={30}
+                description="Books are currently issued to members."
+                icon={BookMarked}
+              />
             </div>
           </div>
 
-          <div className="col-md-4">
-            <div className="stats-card">
-              <div className="card-header">Total Members</div>
-              <div className="card-body">
-                <h5 className="card-title">45</h5>
-                <p>Members are actively using the library.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="stats-card">
-              <div className="card-header">Books Issued</div>
-              <div className="card-body">
-                <h5 className="card-title">30</h5>
-                <p>Books are currently issued to members.</p>
-              </div>
-            </div>
+          {/* Action Buttons */}
+          <div className="opacity-0 animate-fade-in-delay-3 flex flex-wrap justify-center gap-4">
+            <ActionButton
+              label="Manage Books"
+              icon={BookOpen}
+              variant="primary"
+            />
+            <ActionButton
+              label="Manage Members"
+              icon={Users}
+              variant="success"
+            />
+            <ActionButton label="Settings" icon={Settings} variant="warning" />
           </div>
         </div>
+      </section>
 
-        {/* Action Buttons */}
-        <div className="mt-5 text-center">
-          <a href="books.html" className="btn btn-primary btn-lg">
-            Manage Books
-          </a>
-          <a href="members.html" className="btn btn-success btn-lg ms-3">
-            Manage Members
-          </a>
-          <a href="settings.html" className="btn btn-warning btn-lg ms-3">
-            Settings
-          </a>
+      {/* Footer */}
+      <footer className="border-t border-border py-8 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-sm text-muted-foreground">
+            © 2026 Library Management System. Crafted with care.
+          </p>
         </div>
-      </div>
-    </>
+      </footer>
+    </div>
   );
-}
+};
 
 export default Home;

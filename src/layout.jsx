@@ -13,7 +13,7 @@ function Layout() {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="navbar-brand" to="/">
                   Dashboard
                 </Link>
               </li>
@@ -38,11 +38,11 @@ function Layout() {
       </nav>
 
       {/* This is where child pages will render */}
-      <main className=" border border-black w-screen min-h-[1000pz]">
+      <main className=" border  w-screen h-screen border-red-500 ">
         <Outlet />
       </main>
       {/* Footer */}
-      <footer className="pt-2000 border border-black ">
+      <footer className="mt-20 border border-black ">
         <div className="ourfooter ">
           <div>
             <h2>Image Gallery</h2>
