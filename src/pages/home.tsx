@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   BookOpen,
   Users,
@@ -5,9 +7,8 @@ import {
   Settings,
   ArrowRight,
 } from "lucide-react";
-import { StatCard } from "@/components/StatCard";
-import { ActionButton } from "@/components/ActionButton";
-import libraryIcon from "@/assets/library-icon.png";
+import { StatCard } from "./StatCard";
+import { ActionButton } from "../components/ActionButton";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
         <div className="max-w-3xl mx-auto text-center">
           <div className="animate-scale-in mb-8">
             <img
-              src={libraryIcon}
+              src={"../assets/library-icon.png"}
               alt="Library Management System"
               className="w-32 h-32 mx-auto object-contain drop-shadow-sm"
             />
