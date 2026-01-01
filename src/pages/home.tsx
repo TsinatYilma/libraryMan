@@ -7,8 +7,8 @@ import {
   Settings,
   ArrowRight,
 } from "lucide-react";
-import { StatCard } from "./StatCard";
-import { ActionButton } from "../components/ActionButton";
+import { StatCard } from "../components/StatCard.tsx";
+import { ActionButton } from "../components/ActionButton.tsx";
 
 const Home = () => {
   return (

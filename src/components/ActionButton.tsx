@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
+import React from "react";
+import { cn } from "../lib/utils.ts";
 import { LucideIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./button.tsx";
 
 interface ActionButtonProps {
   label: string;

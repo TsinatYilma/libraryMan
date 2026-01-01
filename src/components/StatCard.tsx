@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../lib/utils";
+import { cn } from "../lib/utils.ts";
 import { LucideIcon } from "lucide-react";
 
 interface StatCardProps {
@@ -10,7 +10,13 @@ interface StatCardProps {
   className?: string;
 }
 
-export function StatCard({ title, value, description, icon: Icon, className }: StatCardProps) {
+export function StatCard({
+  title,
+  value,
+  description,
+  icon: Icon,
+  className,
+}: StatCardProps) {
   return (
     <div
       className={cn(

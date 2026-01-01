@@ -1,11 +1,10 @@
 import React from "react";
-
 import { Routes, Route } from "react-router-dom";
-import Layout from "./layout";
+import Layout from "./layout.tsx";
 import "./App.css";
 import "./index.css";
-import Home from "./pages/home";
-import Books from "./pages/books";
+import Home from "./pages/home.tsx";
+import Books from "./pages/books.tsx";
 import "./css/home.css";
 import { Link } from "react-router-dom";
 
