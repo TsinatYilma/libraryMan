@@ -5,7 +5,7 @@ import "./css/home.css";
 function Layout() {
   return (
     <>
-      {/* Navbar */}
+      {/* Navbar 
       <nav className="navbar navbar-expand-lg navbar-light bg-black border">
         <div className="container">
           <Link className="navbar-brand" to="/">
@@ -37,9 +37,10 @@ function Layout() {
           </div>
         </div>
       </nav>
+      */}
 
       {/* This is where child pages will render */}
-      <main className=" border  w-screen h-screen border-red-500 ">
+      <main className="   min-w-screen h-fit border-red-500 ">
         <Outlet />
       </main>
     </>

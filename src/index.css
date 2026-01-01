@@ -1,15 +1,146 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap");
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 30 10% 20%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 30 10% 20%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 30 10% 20%;
+
+    --primary: 145 20% 45%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 35 25% 92%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 35 20% 94%;
+    --muted-foreground: 30 8% 50%;
+
+    --accent: 145 15% 88%;
+    --accent-foreground: 145 25% 30%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 145 20% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(40 33% 97%) 0%,
+      hsl(145 15% 95%) 100%
+    );
+    --card-shadow: 0 4px 20px -4px hsl(30 10% 20% / 0.06);
+    --card-shadow-hover: 0 8px 30px -4px hsl(30 10% 20% / 0.1);
+    --success: 145 30% 42%;
+    --success-foreground: 40 33% 98%;
+    --warning: 38 70% 55%;
+    --warning-foreground: 30 10% 15%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 30 10% 10%;
+    --foreground: 40 20% 92%;
+
+    --card: 30 10% 12%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 30 10% 12%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 145 25% 55%;
+    --primary-foreground: 30 10% 10%;
+
+    --secondary: 30 10% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 30 10% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 145 15% 20%;
+    --accent-foreground: 145 25% 70%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 145 25% 55%;
+
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(30 10% 10%) 0%,
+      hsl(145 15% 12%) 100%
+    );
+    --success: 145 35% 50%;
+    --success-foreground: 30 10% 10%;
+    --warning: 38 65% 50%;
+    --warning-foreground: 30 10% 10%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

@@ -12,51 +12,47 @@ import { ActionButton } from "../components/ActionButton.tsx";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="">
       {/* Hero Section */}
-      <section className="hero-gradient min-h-[60vh] flex items-center justify-center px-4 py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="animate-scale-in mb-8">
+      <section className="">
+        <div className="">
+          <div className="">
             <img
               src={"../assets/library-icon.png"}
               alt="Library Management System"
-              className="w-32 h-32 mx-auto object-contain drop-shadow-sm"
+              className=""
             />
           </div>
 
-          <h1 className="animate-fade-in text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-4 leading-tight">
+          <h1 className="">
             Welcome to the Library
-            <span className="block text-primary mt-2">Management System</span>
+            <span className="">Management System</span>
           </h1>
 
-          <p className="opacity-0 animate-fade-in-delay-1 text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
+          <p className="">
             Stay organized and efficient with our elegant solution for managing
             your library's collection, members, and transactions.
           </p>
 
-          <div className="opacity-0 animate-fade-in-delay-2">
-            <button className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium text-lg shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
+          <div className="">
+            <button className="">
               Start Managing Books
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="" />
             </button>
           </div>
         </div>
       </section>
 
       {/* Statistics Section */}
-      <section className="px-4 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-3">
-              Library Overview
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Your library at a glance
-            </p>
+      <section className="">
+        <div className="">
+          <div className="">
+            <h2 className="">Library Overview</h2>
+            <p className="">Your library at a glance</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="opacity-0 animate-fade-in-delay-1">
+          <div className="">
+            <div className="">
               <StatCard
                 title="Total Books"
                 value={120}
@@ -64,7 +60,7 @@ const Home = () => {
                 icon={BookOpen}
               />
             </div>
-            <div className="opacity-0 animate-fade-in-delay-2">
+            <div className="">
               <StatCard
                 title="Total Members"
                 value={45}
@@ -72,7 +68,7 @@ const Home = () => {
                 icon={Users}
               />
             </div>
-            <div className="opacity-0 animate-fade-in-delay-3">
+            <div className="">
               <StatCard
                 title="Books Issued"
                 value={30}
@@ -83,7 +79,7 @@ const Home = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="opacity-0 animate-fade-in-delay-3 flex flex-wrap justify-center gap-4">
+          <div className="">
             <ActionButton
               label="Manage Books"
               icon={BookOpen}
@@ -100,9 +96,9 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground">
+      <footer className="">
+        <div className="">
+          <p className="">
             © 2026 Library Management System. Crafted with care.
           </p>
         </div>
